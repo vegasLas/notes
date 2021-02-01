@@ -68,7 +68,7 @@ const Register = React.memo((props) => {
                     <input
                         className={cn(values.confirmPassword.trim() !== values.password.trim() && errors.hasOwnProperty('confirmPassword') && 'login__error', "login__input ")}
                         label='confirmPassword'
-                        placeholder='confirmPassword'
+                        placeholder='confirm password'
                         name='confirmPassword'
                         type="text"
                         value={values.confirmPassword}
