@@ -13,7 +13,7 @@ const Note = React.memo(({ username, title, body, createdAt, id }) => {
     var hours = date2.diff(date1, "h");
     var days = date2.diff(date1, "d");
     let date;
-    days > 0 ? date = `${minutes} days` : hours > 0 ? date = `${hours} hours` : date = `${minutes} minutes`
+    days > 0 ? date = `${days} days` : hours > 0 ? date = `${hours} hours` : date = `${minutes} minutes`
     const { deleteNote, user } = useContext(AuthContext)
 
     const [deleteNoteMut, { loading }] = useMutation(DELETE_NOTE, {
