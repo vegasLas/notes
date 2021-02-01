@@ -7,11 +7,11 @@ import moment from "moment"
 
 const Note = React.memo(({ username, title, body, createdAt, id }) => {
     moment.locale('ru')
-    var date1 = moment(createdAt);
-    var date2 = moment(Date.now());
-    var minutes = date2.diff(date1, "m");
-    var hours = date2.diff(date1, "h");
-    var days = date2.diff(date1, "d");
+    let date1 = moment(createdAt);
+    let date2 = moment(Date.now());
+    let minutes = date2.diff(date1, "m");
+    let hours = date2.diff(date1, "h");
+    let days = date2.diff(date1, "d");
     let date;
     days > 0 ? date = `${days} days` : hours > 0 ? date = `${hours} hours` : date = `${minutes} minutes`
     const { deleteNote, user } = useContext(AuthContext)
